@@ -1,0 +1,32 @@
+/* Tailwindcss */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom  */
+
+@font-face {
+  font-family: cubano;
+  src: url(./assets/fonts/Cubano.ttf);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: -apple-system, cubano;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
