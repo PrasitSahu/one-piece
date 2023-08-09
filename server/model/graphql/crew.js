@@ -1,6 +1,8 @@
+// imports
 const graphql = require("graphql");
 const { GraphQLObjectType, GraphQLString, GraphQLID } = graphql;
 
+// schema definition
 const crewType = (types) => new GraphQLObjectType({
     name: 'crew',
     fields: () => ({
@@ -18,4 +20,5 @@ const crewType = (types) => new GraphQLObjectType({
     })
 })
 
+// exports
 module.exports = crewType

@@ -12,7 +12,14 @@ const devilFruitType = (types) =>
       type: GraphQLString,
       img: GraphQLString,
       current_user_id: GraphQLID,
-      past_users: new GraphQLList(types.characterType),
+      prev_user_ids: new GraphQLList(GraphQLID),
+      description: GraphQLString,
+      prev_users: {
+        type: new GraphQLList(types.characterType),
+        resolve(parent, args) {
+          return null; // will be fixed when the data is fetched
+        },
+      },
       current_user: {
         type: types.characterType,
         resolve(parent, args) {
@@ -22,4 +29,5 @@ const devilFruitType = (types) =>
     }),
   });
 
+// exports
 module.exports = devilFruitType;

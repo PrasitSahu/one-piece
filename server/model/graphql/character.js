@@ -17,7 +17,7 @@ const characterType = (types) =>
       crew_id: GraphQLID,
       more_df_ids: new GraphQLList(GraphQLID),
       height: GraphQLString,
-      bounty: GraphQLString,
+      bounty: GraphQLInt,
       age: GraphQLInt,
       relation_id: GraphQLID,
       devil_fruit: {
@@ -37,4 +37,5 @@ const characterType = (types) =>
     }),
   });
 
+// exports
 module.exports = characterType;

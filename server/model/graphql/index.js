@@ -61,6 +61,7 @@ const rootType = new GraphQLObjectType({
   },
 });
 
+// exports
 module.exports = new GraphQLSchema({
   query: rootType,
 });
